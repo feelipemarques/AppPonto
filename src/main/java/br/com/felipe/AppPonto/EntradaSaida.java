@@ -1,4 +1,4 @@
-package br.com.felipe.demo;
+package br.com.felipe.AppPonto;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -35,7 +35,7 @@ public class EntradaSaida extends Application {
     RadioButton saida = new RadioButton("Saída");
     String parsed = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
     Label horario = new Label(String.valueOf("Horário a registrar: " + parsed));
-    ImageView close = new ImageView(new Image(getClass().getResource("/br/com/felipe/demo/close.png").toExternalForm()));
+    ImageView close = new ImageView(new Image(getClass().getResource("/br/com/felipe/AppPonto/close.png").toExternalForm()));
     Button btClose = new Button();
     Button btRegistra = new Button("Registrar");
     ToggleGroup group = new ToggleGroup();

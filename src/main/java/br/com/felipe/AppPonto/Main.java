@@ -1,4 +1,4 @@
-package br.com.felipe.demo;
+package br.com.felipe.AppPonto;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -39,9 +39,9 @@ public class Main extends Application {
     Button btClose = new Button();
     Button btPonto = new Button("Registrar Ponto");
     Button btExportaCSV = new Button("Exportar CSV");
-    ImageView logo = new ImageView(new Image(getClass().getResource("/br/com/felipe/demo/logo.png").toExternalForm()));
-    ImageView refresh = new ImageView(new Image(getClass().getResource("/br/com/felipe/demo/refresh.jpg").toExternalForm()));
-    ImageView close = new ImageView(new Image(getClass().getResource("/br/com/felipe/demo/close.png").toExternalForm()));
+    ImageView logo = new ImageView(new Image(getClass().getResource("/br/com/felipe/AppPonto/logo.png").toExternalForm()));
+    ImageView refresh = new ImageView(new Image(getClass().getResource("/br/com/felipe/AppPonto/refresh.jpg").toExternalForm()));
+    ImageView close = new ImageView(new Image(getClass().getResource("/br/com/felipe/AppPonto/close.png").toExternalForm()));
 
     @Override
     public void start(Stage stage) throws IOException {

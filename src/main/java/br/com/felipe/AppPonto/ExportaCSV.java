@@ -1,4 +1,4 @@
-package br.com.felipe.demo;
+package br.com.felipe.AppPonto;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -22,7 +22,7 @@ public class ExportaCSV extends Application {
     Stage stage = new Stage();
     AnchorPane pane = new AnchorPane();
     Scene scene = new Scene(pane);
-    ImageView close = new ImageView(new Image(getClass().getResource("/br/com/felipe/demo/close.png").toExternalForm()));
+    ImageView close = new ImageView(new Image(getClass().getResource("/br/com/felipe/AppPonto/close.png").toExternalForm()));
     Button btClose = new Button();
     Button btExporta = new Button("Exportar CSV");
     TextField funcional = new TextField();

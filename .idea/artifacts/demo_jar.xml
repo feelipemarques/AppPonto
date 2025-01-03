@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="demo:jar">
     <output-path>$USER_HOME$/Desktop</output-path>
     <root id="archive" name="demo.jar">
-      <element id="module-output" name="demo" />
+      <element id="module-output" name="AppPonto" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1.jar" path-in-jar="/" />
