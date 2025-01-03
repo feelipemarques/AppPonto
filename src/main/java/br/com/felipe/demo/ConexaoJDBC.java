@@ -11,7 +11,7 @@ public class ConexaoJDBC {
     public class DatabaseHelper {
         private static final String URL = "jdbc:mysql://localhost:3306/pontos";
         private static final String USER = "root";
-        private static final String PASSWORD = "080723#Fb!";
+        private static final String PASSWORD = "";
 
         public static Connection connect() throws SQLException {
             return DriverManager.getConnection(URL, USER, PASSWORD);
@@ -38,7 +38,7 @@ public class ConexaoJDBC {
 
 
             } catch (SQLException e) {
-                System.out.println("Deu merda aqui hein!" + e.getSQLState() + e.getMessage() + e.getCause());
+                System.out.println(e.getMessage());
             }
         } else {
             try (Connection conn = DatabaseHelper.connect(); PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -56,7 +56,7 @@ public class ConexaoJDBC {
 
 
             } catch (SQLException e) {
-                System.out.println("!!Deu merda aqui hein!" + e.getSQLState() + e.getMessage() + e.getCause());
+                System.out.println(e.getMessage());
             }
 
         }
