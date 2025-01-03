@@ -5,9 +5,6 @@ import java.sql.*;
 
 public class ConexaoJDBC {
 
-    //DATABASES: PONTO: funcional, dia, hora_entrada, hora_saida
-    //           AUTH: funcional, senha
-
     public class DatabaseHelper {
         private static final String URL = "jdbc:mysql://localhost:3306/pontos";
         private static final String USER = "root";
@@ -82,7 +79,7 @@ public class ConexaoJDBC {
         }catch (Exception e){
             System.out.println("Erro: " + e.getMessage() + e.getCause());
         }
-    }*/ // VOID DE CONSULTA, INÚTIL AGORA!
+    }*/ // VOID DE CONSULTA
 
 
 }
