@@ -1,6 +1,10 @@
 package br.com.felipe.AppPonto;
 
 
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.PrintStream;
 import java.sql.*;
 
 public class ConexaoJDBC {
@@ -58,7 +62,6 @@ public class ConexaoJDBC {
 
         }
     }
-//
 
     /*public void consulta(){
         String sql = "SELECT * FROM PONTO";
@@ -81,5 +84,21 @@ public class ConexaoJDBC {
         }
     }*/ // VOID DE CONSULTA
 
+    public void exportaCSV(TextField funcional, Stage stage){
+        String sql = String.format("SELECT * FROM PONTO WHERE funcional = %s", funcional.getText());
+        try (Connection conn = ConexaoJDBC.DatabaseHelper.connect()){
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            PrintStream ps = new PrintStream("Ponto.csv");
+            ps.println("Funcional;" + "Data;" + "Hora_Entrada;" + "Hora_Saida");
+            while (rs.next()){
+                ps.println(rs.getString("funcional") + ";" + rs.getString("dia") + ";" + rs.getString("hora_entrada") + ";" + rs.getString("hora_saida"));
+            }
+            ps.close();
+            stage.close();
+        }catch (Exception e){
+
+        }
+    }
 
 }
