@@ -3,7 +3,6 @@ module br.com.felipe.AppPonto {
     requires javafx.fxml;
     requires java.desktop;
     requires mysql.connector.j;
-    requires java.persistence;
     requires java.sql;
     requires org.hibernate.orm.core;
 
