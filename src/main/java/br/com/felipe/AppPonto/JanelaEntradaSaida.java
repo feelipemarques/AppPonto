@@ -26,7 +26,6 @@ public class JanelaEntradaSaida extends Application {
     String funcionalJanela1;
     String dataJanela1;
     String horaJanela1;
-    String horaSaidaJanela1;
 
     Stage stage = new Stage();
     AnchorPane pane = new AnchorPane();
@@ -110,10 +109,10 @@ public class JanelaEntradaSaida extends Application {
 
     public void initListeners(){
         btClose.setOnAction(e -> stage.close());
-        btRegistra.setOnAction(e -> registraPonto());
+        btRegistra.setOnAction(e -> registraPontoJDBC());
     }
 
-    public void registraPonto(){
+    public void registraPontoJDBC(){
         if(group.getSelectedToggle().isSelected()){
             ConexaoJDBC conn = new ConexaoJDBC();
             conn.registra(funcionalJanela1, dataJanela1, horaJanela1, entrada.isSelected());
@@ -121,4 +120,5 @@ public class JanelaEntradaSaida extends Application {
             stage.close();
         }
     }
+
 }
