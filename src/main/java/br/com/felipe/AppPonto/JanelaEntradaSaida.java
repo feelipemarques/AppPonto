@@ -21,7 +21,7 @@ import javax.swing.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class EntradaSaida extends Application {
+public class JanelaEntradaSaida extends Application {
 
     String funcionalJanela1;
     String dataJanela1;
@@ -39,8 +39,9 @@ public class EntradaSaida extends Application {
     Button btClose = new Button();
     Button btRegistra = new Button("Registrar");
     ToggleGroup group = new ToggleGroup();
+    ConexaoJPA conexaoJPA = new ConexaoJPA();
 
-    public EntradaSaida(String funcionalJanela1, String dataJanela1, String horaJanela1){
+    public JanelaEntradaSaida(String funcionalJanela1, String dataJanela1, String horaJanela1){
         this.funcionalJanela1 = funcionalJanela1;
         this.dataJanela1 = dataJanela1;
         this.horaJanela1 = horaJanela1;

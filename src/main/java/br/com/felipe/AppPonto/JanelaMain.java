@@ -22,7 +22,7 @@ import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Main extends Application {
+public class JanelaMain extends Application {
 
     Stage stage;
     AnchorPane pane = new AnchorPane();
@@ -42,6 +42,7 @@ public class Main extends Application {
     ImageView logo = new ImageView(new Image(getClass().getResource("/br/com/felipe/AppPonto/logo.png").toExternalForm()));
     ImageView refresh = new ImageView(new Image(getClass().getResource("/br/com/felipe/AppPonto/refresh.jpg").toExternalForm()));
     ImageView close = new ImageView(new Image(getClass().getResource("/br/com/felipe/AppPonto/close.png").toExternalForm()));
+
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -71,7 +72,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 
     public void refreshHour(){
@@ -228,7 +229,7 @@ public class Main extends Application {
                     String senha = rs.getString("senha");
 
                     if(userID.getText().equals(funcional) && password.getText().equals(senha)) {
-                        EntradaSaida cena = new EntradaSaida(userID.getText(), parsedDia, parsedHora);
+                        JanelaEntradaSaida cena = new JanelaEntradaSaida(userID.getText(), parsedDia, parsedHora);
                         try {
                             cena.start(new Stage());
                         } catch (Exception e) {
@@ -251,7 +252,7 @@ public class Main extends Application {
 
     public void abrirExportaCSV(){
         try{
-            ExportaCSV exportaCSV = new ExportaCSV();
+            JanelaExportaCSV exportaCSV = new JanelaExportaCSV();
             exportaCSV.start(new Stage());
         }catch (Exception e){
 

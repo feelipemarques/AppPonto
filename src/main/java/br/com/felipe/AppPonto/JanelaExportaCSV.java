@@ -27,6 +27,7 @@ public class ExportaCSV extends Application {
     Button btExporta = new Button("Exportar CSV");
     TextField funcional = new TextField();
     Label txFuncional = new Label("Digite a funcional para obter o espelho de ponto:");
+    ConexaoJDBC conexaoJDBC = new ConexaoJDBC();
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -76,11 +77,10 @@ public class ExportaCSV extends Application {
     public void initListeners(){
         btClose.setOnAction(e -> stage.close());
 
-        btExporta.setOnAction(e -> exportarCSV());
+        btExporta.setOnAction(e -> conexaoJDBC.exportaCSV(funcional, stage));
     }
 
-    public void exportarCSV(){
-        System.out.println(funcional.getText());
+    /*public void exportarCSV(){
         String sql = String.format("SELECT * FROM PONTO WHERE funcional = %s", funcional.getText());
         try (Connection conn = ConexaoJDBC.DatabaseHelper.connect()){
             Statement stmt = conn.createStatement();
@@ -96,7 +96,7 @@ public class ExportaCSV extends Application {
 
         }
 
-    }
+    }*/
 
 
 }
