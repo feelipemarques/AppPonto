@@ -3,8 +3,8 @@ module br.com.felipe.AppPonto {
     requires javafx.fxml;
     requires java.desktop;
     requires mysql.connector.j;
-    requires java.sql;
     requires org.hibernate.orm.core;
+    requires jakarta.persistence;
 
     opens br.com.felipe.AppPonto;
     exports br.com.felipe.AppPonto;
