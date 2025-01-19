@@ -7,4 +7,5 @@ O aplicativo é baseado em JavaFX, utilizando o driver MySQL JDBC para conexão 
 - Registro de entrada e saída.
 - Atualização dos segundos para o registro do ponto.
 - Exportação do espelho de ponto, dada uma identidade funcional.
+- Uso de JDBC e JPA em branches separadas.
 
